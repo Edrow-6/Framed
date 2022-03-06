@@ -1,0 +1,57 @@
+{
+    "name": "edrow/frawks",
+    "description": "A PHP Framework with Module System for the flexibility",
+    "keywords": ["framwork"],
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Cédric Dnst",
+            "email": "edrow6@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Core\\": "core/",
+            "App\\": "app/",
+            "Plugins\\": "plugins/"
+        }
+    },
+    "require": {
+        "php": "^8.0",
+        "illuminate/database": "^8.80",
+        "illuminate/events": "^8.80",
+        "vlucas/phpdotenv": "^5.4",
+        "symfony/yaml": "^6.0",
+        "monolog/monolog": "^2.3",
+        "tamtamchik/simple-flash": "^2.0",
+        "lasserafn/php-initial-avatar-generator": "^4.2",
+        "league/oauth2-github": "^3.0",
+        "league/oauth2-google": "^4.0",
+        "eftec/bladeone": "^4.4",
+        "symfony/event-dispatcher": "^6.0",
+        "slim/slim": "4.*",
+        "slim/psr7": "^1.5",
+        "symfony/error-handler": "^6.0",
+        "php-di/php-di": "^6.3",
+        "laminas/laminas-config": "^3.7",
+        "php-di/slim-bridge": "^3.2",
+        "spatie/ignition": "^1.2"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest"
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sorted-packages": true,
+        "vendor-dir": "libs/vendor"
+    }
+}

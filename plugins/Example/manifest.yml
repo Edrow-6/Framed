@@ -1,0 +1,9 @@
+# Fields cannot be empty, The '' are optional for text fields
+name: Example Name
+version: 1.0.0
+description: Example plugin, with routes and controllers
+licence: MIT
+
+author:
+  name: 'Edrow'
+  homepage: 'https://github.com/Edrow-6'

@@ -1,0 +1,24 @@
+{
+  "name": "framed",
+  "version": "0.0.1",
+  "description": "A PHP Framework",
+  "main": "none",
+  "repository": "https://github.com/Edrow-6/",
+  "author": "Cédric Dnst",
+  "license": "GPL-3.0-only",
+  "private": true,
+  "scripts": {
+    "build": "npx tailwindcss -i ./public/assets/css/input.css -o ./public/assets/css/output.css",
+    "watch": "npx tailwindcss -i ./public/assets/css/input.css -o ./public/assets/css/output.css --watch",
+    "minify": "npx tailwindcss -i ./public/assets/css/input.css -o ./public/assets/css/output.css -m"
+  },
+  "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.0",
+    "@tailwindcss/forms": "^0.4.0",
+    "@tailwindcss/line-clamp": "^0.3.1",
+    "@tailwindcss/typography": "^0.5.0",
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.5",
+    "tailwindcss": "^3.0.16"
+  }
+}
