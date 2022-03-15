@@ -30,7 +30,7 @@
         "lasserafn/php-initial-avatar-generator": "^4.2",
         "league/oauth2-github": "^3.0",
         "league/oauth2-google": "^4.0",
-        "eftec/bladeone": "^4.4",
+        "eftec/bladeone": "^4.5",
         "symfony/event-dispatcher": "^6.0",
         "slim/slim": "4.*",
         "slim/psr7": "^1.5",

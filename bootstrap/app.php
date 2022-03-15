@@ -52,8 +52,17 @@ if (isset($reloadSettings)) {
     $reloadSettings = \Core\Settings::update($settings);
 }
 
+function getViewPaths(array $settings): array
+{
+    $results[] = __DIR__.'/../app/resources/views';
+    foreach ($settings['plugins'] as $plugin => $value) {
+        $results[] = __DIR__.'/../plugins/'.$plugin.'/resources/views';
+    }
+    return $results;
+}
+
 $container->set('dispatcher', $dispatcher);
-$container->set('view', new \eftec\bladeone\BladeOne(__DIR__.'/../app/resources/views', __DIR__.'/../tmp/cache/blade'));
+$container->set('view', new \eftec\bladeone\BladeOne(getViewPaths($settings), __DIR__.'/../tmp/cache/blade'));
 
 require __DIR__ . '/../routes/web.php';
 
